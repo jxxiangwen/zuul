@@ -30,7 +30,7 @@ import java.net.SocketAddress;
 /**
  * Stores the source IP address as an attribute of the channel. This has the advantage of allowing
  * us to overwrite it if we have more info (eg. ELB sends a HAProxyMessage with info of REAL source
- * host + port).
+ * host + port). 获取源地址
  *
  * User: michaels@netflix.com
  * Date: 4/14/16

@@ -109,6 +109,12 @@ public abstract class BaseServerStartup
         server = new Server(portsToChannelInitializers, serverStatusManager, clientConnectionsShutdown, eventLoopGroupMetrics);
     }
 
+    /**
+     * 获取端口号码对应的ChannelInitializer
+     * @param clientChannels 客户端channel组
+     * @param channelDependencies channel配置
+     * @return 端口号码对应的ChannelInitializerMap
+     */
     protected abstract Map<Integer, ChannelInitializer> choosePortsAndChannels(
             ChannelGroup clientChannels,
             ChannelConfig channelDependencies);

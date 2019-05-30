@@ -15,7 +15,7 @@
  */
 
 package com.netflix.zuul.passport;
-
+// 凭证状态
 public enum PassportState
 {
     IN_REQ_HEADERS_RECEIVED,

@@ -174,7 +174,7 @@ public abstract class BaseZuulChannelInitializer extends ChannelInitializer<Chan
         ServerStatusManager serverStatusManager = channelDependencies.get(ZuulDependencyKeys.serverStatusManager);
         this.serverStatusHeaderHandler = new ServerStatusHeaderHandler(serverStatusManager);
     }
-
+    // 存储请求的channel
     protected void storeChannel(Channel ch)
     {
         this.channels.add(ch);
@@ -242,8 +242,8 @@ public abstract class BaseZuulChannelInitializer extends ChannelInitializer<Chan
     }
 
     protected void addTimeoutHandlers(ChannelPipeline pipeline) {
-        pipeline.addLast(new IdleStateHandler(0, 0, idleTimeout, TimeUnit.MILLISECONDS));
-        pipeline.addLast(new CloseOnIdleStateHandler());
+        pipeline.addLast(new IdleStateHandler(0, 0, idleTimeout, TimeUnit.MILLISECONDS));// 连接空闲监控
+        pipeline.addLast(new CloseOnIdleStateHandler());// 监听空闲连接事件关闭连接
     }
 
     protected void addSslInfoHandlers(ChannelPipeline pipeline, boolean isSSlFromIntermediary) {

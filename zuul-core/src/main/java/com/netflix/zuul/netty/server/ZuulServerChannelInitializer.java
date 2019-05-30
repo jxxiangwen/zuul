@@ -35,7 +35,7 @@ public class ZuulServerChannelInitializer extends BaseZuulChannelInitializer {
     {
         super(port, channelConfig, channelDependencies, channels);
     }
-
+    // 有新连接进入会进入此处，给新的channel添加处理器
     @Override
     protected void initChannel(Channel ch) throws Exception
     {

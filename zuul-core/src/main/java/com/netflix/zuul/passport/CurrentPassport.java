@@ -57,8 +57,8 @@ public class CurrentPassport
             "zuul.passport.state.content.enabled", false);
 
     private final Ticker ticker;
-    private final LinkedList<PassportItem> history;
-    private final HashSet<PassportState> statesAdded;
+    private final LinkedList<PassportItem> history; // 按顺序记录一个请求的历史状态和发生的时间
+    private final HashSet<PassportState> statesAdded; // 记录一个请求发生过的所有状态
     private final long creationTimeSinceEpochMs;
 
     CurrentPassport()

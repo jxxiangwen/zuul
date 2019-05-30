@@ -49,7 +49,7 @@ import static com.netflix.netty.common.HttpLifecycleChannelHandler.CompleteReaso
 import static com.netflix.netty.common.HttpLifecycleChannelHandler.CompleteReason.SESSION_COMPLETE;
 
 /**
- * Created by saroskar on 1/18/17.
+ * Created by saroskar on 1/18/17. // 接受后端服务返回
  */
 public class OriginResponseReceiver extends ChannelDuplexHandler {
 
@@ -66,6 +66,12 @@ public class OriginResponseReceiver extends ChannelDuplexHandler {
         edgeProxy = null;
     }
 
+    /**
+     * 读取后端服务响应
+     * @param ctx channel
+     * @param msg 读取到的消息
+     * @throws Exception
+     */
     @Override
     public void channelRead(final ChannelHandlerContext ctx, Object msg) throws Exception {
         if (msg instanceof HttpResponse) {

@@ -65,7 +65,7 @@ public class NettyClientConnectionFactory {
         }
 
         SocketAddress socketAddress = new InetSocketAddress(host, port);
-
+        // 使用netty连接后端
         final Bootstrap bootstrap = new Bootstrap()
                 .channel(socketChannelClass)
                 .handler(channelInitializer)

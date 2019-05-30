@@ -76,7 +76,7 @@ public class ZuulFilterChainRunner<T extends ZuulMessage> extends BaseZuulFilter
                 inMesg = outMesg;
                 i = runningFilterIdx.incrementAndGet();
             }
-
+            // request filter chain 会使用这个来执行endpoint
             //Filter chain has reached its end, pass result to the next stage
             invokeNextStage(inMesg);
         }

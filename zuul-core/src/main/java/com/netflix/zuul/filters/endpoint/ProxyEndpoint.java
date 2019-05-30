@@ -483,7 +483,7 @@ public class ProxyEndpoint extends SyncZuulFilterAdapter<HttpRequestMessage, Htt
 
             // Also update the RequestAttempt to reflect the readTimeout chosen.
             currentRequestAttempt.setReadTimeout(readTimeout);
-
+            // 发送请求到后端服务
             // Start sending the request to origin now.
             writeClientRequestToOrigin(conn);
         }
