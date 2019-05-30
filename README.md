@@ -1,5 +1,7 @@
 # Zuul
 
+<img src="https://i.imgur.com/mRSosEp.png" width=500/>
+
 [![Build Status](https://travis-ci.org/Netflix/zuul.svg)](https://travis-ci.org/Netflix/zuul/builds)
 
 Zuul is an edge service that provides dynamic routing, monitoring, resiliency, security, and more.
@@ -21,6 +23,8 @@ Netflix presentations about Zuul:
 
 Strange Loop 2017 - Zuul 2: https://youtu.be/2oXqbLhMS_A
 
+AWS re:Invent 2018 - Scaling push messaging for millions of Netflix devices: https://youtu.be/IdR6N9B-S1E
+ 
 ---
 
 Slides from Netflix presentations about Zuul:
@@ -30,6 +34,8 @@ http://www.slideshare.net/MikeyCohen1/zuul-netflix-springone-platform
 http://www.slideshare.net/MikeyCohen1/rethinking-cloud-proxies-54923218
 
 https://github.com/strangeloop/StrangeLoop2017/blob/master/slides/ArthurGonigberg-ZuulsJourneyToNonBlocking.pdf
+
+https://www.slideshare.net/SusheelAroskar/scaling-push-messaging-for-millions-of-netflix-devices
 
 ---
 
